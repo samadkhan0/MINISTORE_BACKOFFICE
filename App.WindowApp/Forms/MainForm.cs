@@ -11,6 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.Core.Services;
+using System.Configuration;
+
 
 
 namespace App.WindowApp.Forms
@@ -25,13 +28,17 @@ namespace App.WindowApp.Forms
         private readonly Color NavNormalFore = Color.Black;
         private readonly Color NavActiveFore = Color.Black;
 
-        InMemoryProductService _productService = new InMemoryProductService();
+        string connectionString;
+        //InMemoryProductService _productService = new DBPro();
+        IProductService _productService ;
+        ICustomerService _customerService;
         private readonly Dictionary<Type, UserControl> _views = new Dictionary<Type, UserControl>();
         public MainForm()
         {
             InitializeComponent();
-
-            
+            connectionString = ConfigurationManager.ConnectionStrings["MiniStoreDB"].ConnectionString;
+            _productService = new DBProductService(connectionString);
+            _customerService = new DBCustomerService(connectionString);
         }
         private void SetActiveNavButton(Button btn)
         {
@@ -82,14 +89,26 @@ namespace App.WindowApp.Forms
             //SetActiveNavButton(btnproducts);
             //pnlContainer.Controls.Clear();
             //pnlContainer.Controls.Add(new productview());
-            ShowView(() => new productview(_productService));           
+            ShowView(() => new productview(_productService));
         }
-        private void ShowView<T>(Func<T> factory)where T : UserControl
+
+        private void btnorders_Click(object sender, EventArgs e)
+        {
+            ShowView(() => new CustomerView(_customerService));
+
+        }
+
+        private void pnlheader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ShowView<T>(Func<T> factory) where T : UserControl
         {
             var key = typeof(T);
-            if (!_views .TryGetValue(key,out var view))
+            if (!_views.TryGetValue(key, out var view))
             {
-               
+
                 view = factory();
                 _views[key] = view;
                 view.Dock = DockStyle.Fill;

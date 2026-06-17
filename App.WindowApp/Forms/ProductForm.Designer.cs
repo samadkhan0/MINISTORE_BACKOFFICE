@@ -63,17 +63,19 @@
             pnlCountaner.Controls.Add(pnlform);
             pnlCountaner.Dock = DockStyle.Fill;
             pnlCountaner.Location = new Point(0, 0);
+            pnlCountaner.Margin = new Padding(2);
             pnlCountaner.Name = "pnlCountaner";
-            pnlCountaner.Size = new Size(800, 450);
+            pnlCountaner.Size = new Size(640, 360);
             pnlCountaner.TabIndex = 0;
             // 
             // pnltoolstrip
             // 
             pnltoolstrip.Controls.Add(flpfooter);
             pnltoolstrip.Dock = DockStyle.Bottom;
-            pnltoolstrip.Location = new Point(0, 353);
+            pnltoolstrip.Location = new Point(0, 282);
+            pnltoolstrip.Margin = new Padding(2);
             pnltoolstrip.Name = "pnltoolstrip";
-            pnltoolstrip.Size = new Size(800, 97);
+            pnltoolstrip.Size = new Size(640, 78);
             pnltoolstrip.TabIndex = 1;
             // 
             // flpfooter
@@ -83,20 +85,21 @@
             flpfooter.AutoSize = true;
             flpfooter.Controls.Add(btnsave);
             flpfooter.Controls.Add(btncancel);
-            flpfooter.Location = new Point(0, 39);
-            flpfooter.Margin = new Padding(3, 100, 3, 3);
+            flpfooter.Location = new Point(0, 31);
+            flpfooter.Margin = new Padding(2, 80, 2, 2);
             flpfooter.Name = "flpfooter";
             flpfooter.RightToLeft = RightToLeft.Yes;
-            flpfooter.Size = new Size(788, 58);
+            flpfooter.Size = new Size(630, 46);
             flpfooter.TabIndex = 0;
             flpfooter.Paint += flowLayoutPanel1_Paint;
             // 
             // btnsave
             // 
             btnsave.Anchor = AnchorStyles.Right;
-            btnsave.Location = new Point(673, 3);
+            btnsave.Location = new Point(538, 2);
+            btnsave.Margin = new Padding(2);
             btnsave.Name = "btnsave";
-            btnsave.Size = new Size(112, 34);
+            btnsave.Size = new Size(90, 27);
             btnsave.TabIndex = 1;
             btnsave.Text = "save";
             btnsave.UseVisualStyleBackColor = true;
@@ -105,9 +108,10 @@
             // btncancel
             // 
             btncancel.Anchor = AnchorStyles.Right;
-            btncancel.Location = new Point(555, 3);
+            btncancel.Location = new Point(444, 2);
+            btncancel.Margin = new Padding(2);
             btncancel.Name = "btncancel";
-            btncancel.Size = new Size(112, 34);
+            btncancel.Size = new Size(90, 27);
             btncancel.TabIndex = 0;
             btncancel.Text = "cancel";
             btncancel.UseVisualStyleBackColor = true;
@@ -119,8 +123,9 @@
             pnlform.Controls.Add(label1);
             pnlform.Dock = DockStyle.Top;
             pnlform.Location = new Point(0, 0);
+            pnlform.Margin = new Padding(2);
             pnlform.Name = "pnlform";
-            pnlform.Size = new Size(800, 310);
+            pnlform.Size = new Size(640, 248);
             pnlform.TabIndex = 0;
             pnlform.Paint += panel2_Paint;
             // 
@@ -143,6 +148,7 @@
             tblform.Controls.Add(txtid, 1, 5);
             tblform.Dock = DockStyle.Fill;
             tblform.Location = new Point(0, 0);
+            tblform.Margin = new Padding(2);
             tblform.Name = "tblform";
             tblform.RowCount = 6;
             tblform.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
@@ -151,7 +157,7 @@
             tblform.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
             tblform.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
             tblform.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tblform.Size = new Size(800, 310);
+            tblform.Size = new Size(640, 248);
             tblform.TabIndex = 1;
             tblform.Paint += tblform_Paint;
             // 
@@ -159,10 +165,11 @@
             // 
             lblname.AutoSize = true;
             lblname.Dock = DockStyle.Fill;
-            lblname.Location = new Point(3, 0);
+            lblname.Location = new Point(2, 0);
+            lblname.Margin = new Padding(2, 0, 2, 0);
             lblname.Name = "lblname";
-            lblname.Padding = new Padding(10);
-            lblname.Size = new Size(125, 51);
+            lblname.Padding = new Padding(8);
+            lblname.Size = new Size(100, 41);
             lblname.TabIndex = 0;
             lblname.Text = "Name";
             // 
@@ -170,10 +177,11 @@
             // 
             lblcategory.AutoSize = true;
             lblcategory.Dock = DockStyle.Top;
-            lblcategory.Location = new Point(3, 51);
+            lblcategory.Location = new Point(2, 41);
+            lblcategory.Margin = new Padding(2, 0, 2, 0);
             lblcategory.Name = "lblcategory";
-            lblcategory.Padding = new Padding(10);
-            lblcategory.Size = new Size(125, 45);
+            lblcategory.Padding = new Padding(8);
+            lblcategory.Size = new Size(100, 36);
             lblcategory.TabIndex = 7;
             lblcategory.Text = "Category";
             // 
@@ -181,10 +189,11 @@
             // 
             lblprice.AutoSize = true;
             lblprice.Dock = DockStyle.Top;
-            lblprice.Location = new Point(3, 102);
+            lblprice.Location = new Point(2, 82);
+            lblprice.Margin = new Padding(2, 0, 2, 0);
             lblprice.Name = "lblprice";
-            lblprice.Padding = new Padding(10);
-            lblprice.Size = new Size(125, 45);
+            lblprice.Padding = new Padding(8);
+            lblprice.Size = new Size(100, 36);
             lblprice.TabIndex = 8;
             lblprice.Text = "Price";
             // 
@@ -192,10 +201,11 @@
             // 
             lblstock.AutoSize = true;
             lblstock.Dock = DockStyle.Top;
-            lblstock.Location = new Point(3, 153);
+            lblstock.Location = new Point(2, 123);
+            lblstock.Margin = new Padding(2, 0, 2, 0);
             lblstock.Name = "lblstock";
-            lblstock.Padding = new Padding(10);
-            lblstock.Size = new Size(125, 45);
+            lblstock.Padding = new Padding(8);
+            lblstock.Size = new Size(100, 36);
             lblstock.TabIndex = 9;
             lblstock.Text = "Stock";
             // 
@@ -203,10 +213,11 @@
             // 
             lblstatus.AutoSize = true;
             lblstatus.Dock = DockStyle.Top;
-            lblstatus.Location = new Point(3, 204);
+            lblstatus.Location = new Point(2, 164);
+            lblstatus.Margin = new Padding(2, 0, 2, 0);
             lblstatus.Name = "lblstatus";
-            lblstatus.Padding = new Padding(10);
-            lblstatus.Size = new Size(125, 45);
+            lblstatus.Padding = new Padding(8);
+            lblstatus.Size = new Size(100, 36);
             lblstatus.TabIndex = 10;
             lblstatus.Text = "Status";
             // 
@@ -214,79 +225,88 @@
             // 
             lblid.AutoSize = true;
             lblid.Dock = DockStyle.Top;
-            lblid.Location = new Point(3, 255);
+            lblid.Location = new Point(2, 205);
+            lblid.Margin = new Padding(2, 0, 2, 0);
             lblid.Name = "lblid";
-            lblid.Padding = new Padding(10);
-            lblid.Size = new Size(125, 45);
+            lblid.Padding = new Padding(8);
+            lblid.Size = new Size(100, 36);
             lblid.TabIndex = 11;
             lblid.Text = "ID";
             // 
             // txtname
             // 
             txtname.Dock = DockStyle.Fill;
-            txtname.Location = new Point(134, 3);
+            txtname.Location = new Point(106, 2);
+            txtname.Margin = new Padding(2);
             txtname.Name = "txtname";
-            txtname.Size = new Size(663, 31);
+            txtname.Size = new Size(532, 27);
             txtname.TabIndex = 0;
             // 
             // cmbcategory
             // 
             cmbcategory.Dock = DockStyle.Fill;
             cmbcategory.FormattingEnabled = true;
-            cmbcategory.Location = new Point(134, 54);
+            cmbcategory.Location = new Point(106, 43);
+            cmbcategory.Margin = new Padding(2);
             cmbcategory.Name = "cmbcategory";
-            cmbcategory.Size = new Size(663, 33);
+            cmbcategory.Size = new Size(532, 28);
             cmbcategory.TabIndex = 1;
             // 
             // numprice
             // 
             numprice.Dock = DockStyle.Fill;
-            numprice.Location = new Point(134, 105);
+            numprice.Location = new Point(106, 84);
+            numprice.Margin = new Padding(2);
             numprice.Name = "numprice";
-            numprice.Size = new Size(663, 31);
+            numprice.Size = new Size(532, 27);
             numprice.TabIndex = 5;
             // 
             // numstock
             // 
             numstock.Dock = DockStyle.Fill;
-            numstock.Location = new Point(134, 156);
+            numstock.Location = new Point(106, 125);
+            numstock.Margin = new Padding(2);
             numstock.Name = "numstock";
-            numstock.Size = new Size(663, 31);
+            numstock.Size = new Size(532, 27);
             numstock.TabIndex = 3;
             // 
             // cmbstatus
             // 
             cmbstatus.Dock = DockStyle.Fill;
             cmbstatus.FormattingEnabled = true;
-            cmbstatus.Location = new Point(134, 207);
+            cmbstatus.Location = new Point(106, 166);
+            cmbstatus.Margin = new Padding(2);
             cmbstatus.Name = "cmbstatus";
-            cmbstatus.Size = new Size(663, 33);
+            cmbstatus.Size = new Size(532, 28);
             cmbstatus.TabIndex = 4;
             // 
             // txtid
             // 
             txtid.Dock = DockStyle.Fill;
-            txtid.Location = new Point(134, 258);
+            txtid.Location = new Point(106, 207);
+            txtid.Margin = new Padding(2);
             txtid.Name = "txtid";
             txtid.ReadOnly = true;
-            txtid.Size = new Size(663, 31);
+            txtid.Size = new Size(532, 27);
             txtid.TabIndex = 5;
             txtid.TextChanged += txtid_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 10);
+            label1.Location = new Point(28, 8);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 25);
+            label1.Size = new Size(0, 20);
             label1.TabIndex = 0;
             // 
             // ProductForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
             Controls.Add(pnlCountaner);
+            Margin = new Padding(2);
             Name = "ProductForm";
             StartPosition = FormStartPosition.CenterParent;
             Load += ProductForm_Load;

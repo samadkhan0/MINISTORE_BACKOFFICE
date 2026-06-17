@@ -1,0 +1,8 @@
+﻿CREATE TABLE Customer (
+    Id      NVARCHAR(20)  PRIMARY KEY,
+    Name    NVARCHAR(100) NOT NULL,
+    Email   NVARCHAR(100) NOT NULL,
+    Phone   NVARCHAR(20)  NOT NULL,
+    Address NVARCHAR(255) NOT NULL,
+    Status  NVARCHAR(20)  NOT NULL DEFAULT 'Active'
+);

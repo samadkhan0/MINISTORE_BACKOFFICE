@@ -41,9 +41,10 @@
             flpnav = new FlowLayoutPanel();
             btndashboard = new Button();
             btnproducts = new Button();
-            btnorders = new Button();
-            btnlogs = new Button();
+            btnCustomer = new Button();
+            button1 = new Button();
             btnsetting = new Button();
+            btnlogs = new Button();
             label2 = new Label();
             pnlheader.SuspendLayout();
             flpright.SuspendLayout();
@@ -65,6 +66,7 @@
             pnlheader.Name = "pnlheader";
             pnlheader.Size = new Size(1733, 105);
             pnlheader.TabIndex = 0;
+            pnlheader.Paint += pnlheader_Paint;
             // 
             // flpright
             // 
@@ -152,12 +154,12 @@
             // 
             // flpnav
             // 
-            flpnav.BackColor = Color.White;
             flpnav.Controls.Add(btndashboard);
             flpnav.Controls.Add(btnproducts);
-            flpnav.Controls.Add(btnorders);
-            flpnav.Controls.Add(btnlogs);
+            flpnav.Controls.Add(btnCustomer);
+            flpnav.Controls.Add(button1);
             flpnav.Controls.Add(btnsetting);
+            flpnav.Controls.Add(btnlogs);
             flpnav.FlowDirection = FlowDirection.TopDown;
             flpnav.Location = new Point(0, 0);
             flpnav.Margin = new Padding(3, 4, 3, 4);
@@ -199,33 +201,34 @@
             btnproducts.UseVisualStyleBackColor = true;
             btnproducts.Click += btnproducts_Click;
             // 
-            // btnorders
+            // btnCustomer
             // 
-            btnorders.FlatAppearance.BorderSize = 0;
-            btnorders.FlatStyle = FlatStyle.Flat;
-            btnorders.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnorders.ImageAlign = ContentAlignment.MiddleLeft;
-            btnorders.Location = new Point(28, 150);
-            btnorders.Margin = new Padding(6);
-            btnorders.Name = "btnorders";
-            btnorders.Size = new Size(183, 48);
-            btnorders.TabIndex = 2;
-            btnorders.Text = "Orders";
-            btnorders.UseVisualStyleBackColor = true;
+            btnCustomer.FlatAppearance.BorderSize = 0;
+            btnCustomer.FlatStyle = FlatStyle.Flat;
+            btnCustomer.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCustomer.Location = new Point(28, 150);
+            btnCustomer.Margin = new Padding(6);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(183, 48);
+            btnCustomer.TabIndex = 2;
+            btnCustomer.Text = "Customer";
+            btnCustomer.UseVisualStyleBackColor = true;
+            btnCustomer.Click += btnorders_Click;
             // 
-            // btnlogs
+            // button1
             // 
-            btnlogs.FlatAppearance.BorderSize = 0;
-            btnlogs.FlatStyle = FlatStyle.Flat;
-            btnlogs.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnlogs.ImageAlign = ContentAlignment.MiddleLeft;
-            btnlogs.Location = new Point(28, 210);
-            btnlogs.Margin = new Padding(6);
-            btnlogs.Name = "btnlogs";
-            btnlogs.Size = new Size(174, 48);
-            btnlogs.TabIndex = 3;
-            btnlogs.Text = "Logs";
-            btnlogs.UseVisualStyleBackColor = true;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(28, 210);
+            button1.Margin = new Padding(6);
+            button1.Name = "button1";
+            button1.Size = new Size(183, 48);
+            button1.TabIndex = 5;
+            button1.Text = "Orders";
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnsetting
             // 
@@ -241,6 +244,20 @@
             btnsetting.TabIndex = 4;
             btnsetting.Text = "Setting";
             btnsetting.UseVisualStyleBackColor = true;
+            // 
+            // btnlogs
+            // 
+            btnlogs.FlatAppearance.BorderSize = 0;
+            btnlogs.FlatStyle = FlatStyle.Flat;
+            btnlogs.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnlogs.ImageAlign = ContentAlignment.MiddleLeft;
+            btnlogs.Location = new Point(28, 330);
+            btnlogs.Margin = new Padding(6);
+            btnlogs.Name = "btnlogs";
+            btnlogs.Size = new Size(174, 48);
+            btnlogs.TabIndex = 3;
+            btnlogs.Text = "Logs";
+            btnlogs.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -290,7 +307,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpnav;
         private System.Windows.Forms.Button btndashboard;
         private System.Windows.Forms.Button btnproducts;
-        private System.Windows.Forms.Button btnorders;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnlogs;
         private System.Windows.Forms.Button btnsetting;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -298,5 +315,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Label label2;
+        private Button button1;
     }
 }

@@ -114,5 +114,15 @@ namespace App.WindowApp.View
             dgvBindingSource.DataSource =
                 _service.Search(searchText, selectedCategory, selectedStatus);
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Product? selectedProduct = dgvBindingSource.Current as Product;
+            if (selectedProduct != null)
+            {
+                _service.Delete(selectedProduct.Id);
+                RefreshGrid();
+            }
+        }
     }
 }

@@ -72,14 +72,14 @@
             tblproducts.Controls.Add(pnlgrid, 0, 2);
             tblproducts.Dock = DockStyle.Fill;
             tblproducts.Location = new Point(0, 0);
-            tblproducts.Margin = new Padding(3, 4, 3, 4);
+            tblproducts.Margin = new Padding(2, 3, 2, 3);
             tblproducts.Name = "tblproducts";
-            tblproducts.Padding = new Padding(18, 20, 18, 20);
+            tblproducts.Padding = new Padding(14, 16, 14, 16);
             tblproducts.RowCount = 3;
-            tblproducts.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tblproducts.RowStyles.Add(new RowStyle(SizeType.Absolute, 118F));
+            tblproducts.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tblproducts.RowStyles.Add(new RowStyle(SizeType.Absolute, 94F));
             tblproducts.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblproducts.Size = new Size(1155, 759);
+            tblproducts.Size = new Size(924, 607);
             tblproducts.TabIndex = 0;
             // 
             // pnltoolbar
@@ -87,10 +87,10 @@
             pnltoolbar.BackColor = Color.White;
             pnltoolbar.Controls.Add(toolStrip);
             pnltoolbar.Dock = DockStyle.Fill;
-            pnltoolbar.Location = new Point(21, 24);
-            pnltoolbar.Margin = new Padding(3, 4, 3, 4);
+            pnltoolbar.Location = new Point(16, 19);
+            pnltoolbar.Margin = new Padding(2, 3, 2, 3);
             pnltoolbar.Name = "pnltoolbar";
-            pnltoolbar.Size = new Size(1113, 62);
+            pnltoolbar.Size = new Size(892, 50);
             pnltoolbar.TabIndex = 0;
             // 
             // toolStrip
@@ -101,7 +101,7 @@
             toolStrip.Items.AddRange(new ToolStripItem[] { btnadd, btnedit, btnview, toolStripButton4, toolStripSeparator1, toolStripButton6 });
             toolStrip.Location = new Point(0, 0);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(1113, 62);
+            toolStrip.Size = new Size(892, 50);
             toolStrip.TabIndex = 0;
             toolStrip.Text = "toolStrip1";
             // 
@@ -110,7 +110,7 @@
             btnadd.Image = (Image)resources.GetObject("btnadd.Image");
             btnadd.ImageTransparentColor = Color.Magenta;
             btnadd.Name = "btnadd";
-            btnadd.Size = new Size(74, 57);
+            btnadd.Size = new Size(65, 47);
             btnadd.Text = "Add";
             btnadd.Click += btnadd_Click;
             // 
@@ -119,7 +119,7 @@
             btnedit.Image = (Image)resources.GetObject("btnedit.Image");
             btnedit.ImageTransparentColor = Color.Magenta;
             btnedit.Name = "btnedit";
-            btnedit.Size = new Size(70, 57);
+            btnedit.Size = new Size(63, 47);
             btnedit.Text = "Edit";
             btnedit.Click += btnedit_Click;
             // 
@@ -128,7 +128,7 @@
             btnview.Image = (Image)resources.GetObject("btnview.Image");
             btnview.ImageTransparentColor = Color.Magenta;
             btnview.Name = "btnview";
-            btnview.Size = new Size(77, 57);
+            btnview.Size = new Size(69, 47);
             btnview.Text = "View";
             btnview.Click += btnview_Click;
             // 
@@ -137,20 +137,21 @@
             toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
             toolStripButton4.ImageTransparentColor = Color.Magenta;
             toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(90, 57);
+            toolStripButton4.Size = new Size(81, 47);
             toolStripButton4.Text = "Delete";
+            toolStripButton4.Click += toolStripButton4_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 62);
+            toolStripSeparator1.Size = new Size(6, 50);
             // 
             // toolStripButton6
             // 
             toolStripButton6.Image = (Image)resources.GetObject("toolStripButton6.Image");
             toolStripButton6.ImageTransparentColor = Color.Magenta;
             toolStripButton6.Name = "toolStripButton6";
-            toolStripButton6.Size = new Size(98, 57);
+            toolStripButton6.Size = new Size(86, 47);
             toolStripButton6.Text = "Refresh";
             // 
             // pnlfilters
@@ -158,11 +159,11 @@
             pnlfilters.BackColor = Color.White;
             pnlfilters.Controls.Add(tblfilter);
             pnlfilters.Dock = DockStyle.Fill;
-            pnlfilters.Location = new Point(21, 94);
-            pnlfilters.Margin = new Padding(3, 4, 3, 4);
+            pnlfilters.Location = new Point(16, 75);
+            pnlfilters.Margin = new Padding(2, 3, 2, 3);
             pnlfilters.Name = "pnlfilters";
-            pnlfilters.Padding = new Padding(13, 12, 13, 15);
-            pnlfilters.Size = new Size(1113, 110);
+            pnlfilters.Padding = new Padding(10, 10, 10, 12);
+            pnlfilters.Size = new Size(892, 88);
             pnlfilters.TabIndex = 1;
             pnlfilters.Paint += pnlfilters_Paint;
             // 
@@ -181,22 +182,23 @@
             tblfilter.Controls.Add(cmbcategory, 1, 1);
             tblfilter.Controls.Add(cmbstockstatus, 2, 1);
             tblfilter.Dock = DockStyle.Fill;
-            tblfilter.Location = new Point(13, 12);
-            tblfilter.Margin = new Padding(3, 4, 3, 4);
+            tblfilter.Location = new Point(10, 10);
+            tblfilter.Margin = new Padding(2, 3, 2, 3);
             tblfilter.Name = "tblfilter";
             tblfilter.RowCount = 2;
             tblfilter.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tblfilter.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblfilter.Size = new Size(1087, 83);
+            tblfilter.Size = new Size(872, 66);
             tblfilter.TabIndex = 0;
             // 
             // lblsearch
             // 
             lblsearch.AutoSize = true;
             lblsearch.Dock = DockStyle.Fill;
-            lblsearch.Location = new Point(3, 0);
+            lblsearch.Location = new Point(2, 0);
+            lblsearch.Margin = new Padding(2, 0, 2, 0);
             lblsearch.Name = "lblsearch";
-            lblsearch.Size = new Size(428, 41);
+            lblsearch.Size = new Size(344, 33);
             lblsearch.TabIndex = 0;
             lblsearch.Text = "Search";
             // 
@@ -204,9 +206,10 @@
             // 
             lblcategory.AutoSize = true;
             lblcategory.Dock = DockStyle.Fill;
-            lblcategory.Location = new Point(437, 0);
+            lblcategory.Location = new Point(350, 0);
+            lblcategory.Margin = new Padding(2, 0, 2, 0);
             lblcategory.Name = "lblcategory";
-            lblcategory.Size = new Size(320, 41);
+            lblcategory.Size = new Size(257, 33);
             lblcategory.TabIndex = 1;
             lblcategory.Text = "Category";
             // 
@@ -214,19 +217,20 @@
             // 
             lblstock.AutoSize = true;
             lblstock.Dock = DockStyle.Fill;
-            lblstock.Location = new Point(763, 0);
+            lblstock.Location = new Point(611, 0);
+            lblstock.Margin = new Padding(2, 0, 2, 0);
             lblstock.Name = "lblstock";
-            lblstock.Size = new Size(321, 41);
+            lblstock.Size = new Size(259, 33);
             lblstock.TabIndex = 2;
             lblstock.Text = "Stock Status";
             // 
             // txtseaarch
             // 
             txtseaarch.Dock = DockStyle.Fill;
-            txtseaarch.Location = new Point(3, 45);
-            txtseaarch.Margin = new Padding(3, 4, 3, 4);
+            txtseaarch.Location = new Point(2, 36);
+            txtseaarch.Margin = new Padding(2, 3, 2, 3);
             txtseaarch.Name = "txtseaarch";
-            txtseaarch.Size = new Size(428, 31);
+            txtseaarch.Size = new Size(344, 27);
             txtseaarch.TabIndex = 3;
             txtseaarch.TextChanged += txtseaarch_TextChanged;
             // 
@@ -234,20 +238,20 @@
             // 
             cmbcategory.Dock = DockStyle.Fill;
             cmbcategory.FormattingEnabled = true;
-            cmbcategory.Location = new Point(437, 45);
-            cmbcategory.Margin = new Padding(3, 4, 3, 4);
+            cmbcategory.Location = new Point(350, 36);
+            cmbcategory.Margin = new Padding(2, 3, 2, 3);
             cmbcategory.Name = "cmbcategory";
-            cmbcategory.Size = new Size(320, 33);
+            cmbcategory.Size = new Size(257, 28);
             cmbcategory.TabIndex = 4;
             // 
             // cmbstockstatus
             // 
             cmbstockstatus.Dock = DockStyle.Fill;
             cmbstockstatus.FormattingEnabled = true;
-            cmbstockstatus.Location = new Point(763, 45);
-            cmbstockstatus.Margin = new Padding(3, 4, 3, 4);
+            cmbstockstatus.Location = new Point(611, 36);
+            cmbstockstatus.Margin = new Padding(2, 3, 2, 3);
             cmbstockstatus.Name = "cmbstockstatus";
-            cmbstockstatus.Size = new Size(321, 33);
+            cmbstockstatus.Size = new Size(259, 28);
             cmbstockstatus.TabIndex = 5;
             // 
             // pnlgrid
@@ -255,11 +259,11 @@
             pnlgrid.BackColor = Color.White;
             pnlgrid.Controls.Add(dgvProducts);
             pnlgrid.Dock = DockStyle.Fill;
-            pnlgrid.Location = new Point(21, 212);
-            pnlgrid.Margin = new Padding(3, 4, 3, 4);
+            pnlgrid.Location = new Point(16, 169);
+            pnlgrid.Margin = new Padding(2, 3, 2, 3);
             pnlgrid.Name = "pnlgrid";
-            pnlgrid.Padding = new Padding(13, 15, 13, 15);
-            pnlgrid.Size = new Size(1113, 523);
+            pnlgrid.Padding = new Padding(10, 12, 10, 12);
+            pnlgrid.Size = new Size(892, 419);
             pnlgrid.TabIndex = 2;
             // 
             // dgvProducts
@@ -269,8 +273,8 @@
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProducts.Columns.AddRange(new DataGridViewColumn[] { ColId, colName, colCategory, colprice, colstock, colStatus });
             dgvProducts.Dock = DockStyle.Top;
-            dgvProducts.Location = new Point(13, 15);
-            dgvProducts.Margin = new Padding(3, 4, 3, 4);
+            dgvProducts.Location = new Point(10, 12);
+            dgvProducts.Margin = new Padding(2, 3, 2, 3);
             dgvProducts.MultiSelect = false;
             dgvProducts.Name = "dgvProducts";
             dgvProducts.ReadOnly = true;
@@ -278,7 +282,7 @@
             dgvProducts.RowHeadersWidth = 62;
             dgvProducts.RowTemplate.Height = 28;
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProducts.Size = new Size(1087, 272);
+            dgvProducts.Size = new Size(872, 218);
             dgvProducts.TabIndex = 0;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
@@ -332,12 +336,12 @@
             // 
             // productview
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tblproducts);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "productview";
-            Size = new Size(1155, 759);
+            Size = new Size(924, 607);
             Load += productview_Load;
             tblproducts.ResumeLayout(false);
             pnltoolbar.ResumeLayout(false);
